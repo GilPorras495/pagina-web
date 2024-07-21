@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(to bottom, #4550f0, white)
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-image: url(images/GilGab.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items:  center;
+    min-height: 80vh;
+    padding: 80px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: o;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: blue;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size:  18px;
+    padding: 20px;
+    color: black;
+    font-weight: 600;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: orange;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu-label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+.header-txt h1 {
+    font-size: 60px;
+    color: aliceblue;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.header-txt span {
+    color:  orange;
+}
+
+.header-txt p {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 45px;
+}
+
+.button {
+    display: flex;
+}
+
+.btn-1, .btn-2, .btn-3 {
+
+    display: inline-block;
+    padding: 11px 35px;
+    border: 2px solid red;
+    border-radius:  25px;
+    margin-right: 25px;
+    font-size: 17px;
+    color: aliceblue;
+
+}
+
+.btn-1:hover {
+    background-color: orange;
+}
+
+.popular {
+    padding: 100px o;
+    text-align: center;
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+.popular-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-content img {
+    width: 150px;
+}
+
+.productos-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.producto-txt {
+    padding: 50px 30px;
+}
+
+h3 { 
+    font-size: 20px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price p {
+    font-size:  17px;
+    color: orange;
+}
+
+.btn-2 {
+    padding: 5px 25px;
+    background-color: orange;
+    margin-right: 0;
+}
+
+.contactos {
+    padding: 150px 300px;
+}
+
+.contactos-content{
+    background-color: aqua;
+    text-align: center;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input{
+    padding: 18px 25px;
+    background-color: blue;
+    border: 0;
+    border-radius: 25px;
+    outline: none;
+    margin-right: 10px;
+    color: white;
+    font-size: 17px;
+}
+
+::placeholder{
+    color: white;
+    font-size: 17px;
+}
+
+.btn-3{
+    background-color: orange;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    align-items: center;
+}
+
+.link ul{
+    display: flex;
+}
+
+.link ul li > a {
+    font-size: 17px;
+    color: aliceblue;
+    margin-right: 20px;
+}
+
+.link ul li > a :hover{
+    color: orange;
+}
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+    .menu-label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: orange;
+        display: none;
+    }
+    .menu .navbar ul li a:hover{
+        color: black;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+        padding: 80px 30px 50px 30px;
+    }
+
+    .header-txt{
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    .header-txt h1{
+        font-size:  50px;
+        margin-bottom: 15px;
+    }
+
+    .button{
+        justify-content: center;
+    }
+
+    .btn-1:last-of-type{
+        margin-right: 0;
+    }
+
+    .popular{
+        display: none;
+    }
+
+    .producto {
+        padding: 30px;
+    }
+
+    .productos-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .producto-1 img {
+        width: 100%;
+    }
+
+    .contactos{
+        padding: 30px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        margin: 0 0 20px 0;
+    }
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link ul {
+        margin-top: 20px;
+    }
+
+}
